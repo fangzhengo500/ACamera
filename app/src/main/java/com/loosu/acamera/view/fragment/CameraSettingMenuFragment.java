@@ -1,4 +1,4 @@
-package com.loosu.acamera.ui.fragment;
+package com.loosu.acamera.view.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
