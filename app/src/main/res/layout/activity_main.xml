@@ -9,33 +9,16 @@
     android:background="#fA6"
     tools:context="com.loosu.acamera.ui.activity.MainActivity">
 
-    <FrameLayout
+    <fragment
+        class="com.loosu.acamera.ui.fragment.CameraPerviewFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent"/>
 
-        <ImageView
-            android:layout_width="@dimen/perview_btn_size"
-            android:layout_height="@dimen/perview_btn_size"
-            android:layout_gravity="right"
-            android:padding="@dimen/perview_btn_padding"
-            android:src="@drawable/ic_action_switch"/>
-
-        <ImageView
-            android:id="@+id/btn_settings"
-            android:layout_width="@dimen/perview_btn_size"
-            android:layout_height="@dimen/perview_btn_size"
-            android:layout_gravity="right|bottom"
-            android:padding="@dimen/perview_btn_padding"
-            android:src="@drawable/ic_action_setting"/>
-    </FrameLayout>
-
-    <FrameLayout
+    <fragment
         android:id="@+id/main_drawer_menu"
+        class="com.loosu.acamera.ui.fragment.CameraSettingMenuFragment"
         android:layout_width="240dp"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:background="#Af66">
+        android:layout_gravity="end"/>
 
-    </FrameLayout>
 </android.support.v4.widget.DrawerLayout>
