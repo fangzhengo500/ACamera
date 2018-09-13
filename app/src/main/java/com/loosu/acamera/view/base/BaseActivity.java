@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.loosu.acamera.presenter.base.MvpPresenter;
+import com.loosu.mvpframewor.presenter.MvpPresenter;
 
-public abstract class BaseActivity<P extends MvpPresenter> extends AppCompatActivity implements MvpView {
+public abstract class BaseActivity<P extends MvpPresenter> extends AppCompatActivity {
 
     protected final P mPresenter;
 
@@ -18,8 +18,8 @@ public abstract class BaseActivity<P extends MvpPresenter> extends AppCompatActi
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         mPresenter.onAttach(this);
+        super.onCreate(savedInstanceState);
     }
 
     @Override

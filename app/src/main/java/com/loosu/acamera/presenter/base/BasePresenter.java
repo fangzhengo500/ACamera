@@ -1,8 +1,9 @@
 package com.loosu.acamera.presenter.base;
 
-import com.loosu.acamera.view.base.MvpView;
 
-public class BasePresenter<V extends MvpView> implements MvpPresenter<V> {
+import com.loosu.mvpframewor.presenter.MvpPresenter;
+
+public class BasePresenter<V> implements MvpPresenter<V> {
 
     protected V mView = null;
 

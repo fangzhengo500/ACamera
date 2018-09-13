@@ -1,24 +1,24 @@
 package com.loosu.acamera.view.activity;
 
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 
 import com.loosu.acamera.R;
-import com.loosu.acamera.presenter.base.MvpPresenter;
+import com.loosu.acamera.contract.MainContract;
+import com.loosu.acamera.presenter.MainPresenter;
 import com.loosu.acamera.view.base.BaseActivity;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity<MainContract.Presenter> {
 
     private DrawerLayout mMainDrawerLayout;
     private View mMainDrawerMenu;
     private View mBtnSettings;
 
     @Override
-    protected MvpPresenter createPresenter() {
-        return null;
+    protected MainContract.Presenter createPresenter() {
+        return new MainPresenter();
     }
 
     @Override
