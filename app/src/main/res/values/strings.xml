@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ACamera</string>
     <string name="camera_setting_menu_af">自动对焦</string>
+    <string name="camera_setting_menu_rear_camera">后置摄像头</string>
 </resources>

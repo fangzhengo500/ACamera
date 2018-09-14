@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItemView">
+        <attr name="itemText" format="string|reference" />
+        <attr name="itemTextSize" format="integer|reference" />
+        <attr name="itemTextColor" format="color|reference" />
+
+        <attr name="itemSubText" format="string|reference" />
+        <attr name="itemSubTextSize" format="integer|reference" />
+        <attr name="itemSubTextColor" format="color|reference" />
+
+        <attr name="itemSwitchEnable" format="boolean" />
+        <attr name="itemSwitchChecked" format="boolean" />
+    </declare-styleable>
+</resources>

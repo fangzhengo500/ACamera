@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_drawer_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
     android:orientation="vertical">
 
-    <RelativeLayout
-        style="@style/CameraSettingMenuStyle.Item"
-        android:background="#f66"
-        android:orientation="horizontal">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            style="@style/CameraSettingMenuStyle.Item.Label"
-            android:text="@string/camera_setting_menu_af" />
-
-        <Switch
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true" />
-    </RelativeLayout>
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/CameraSettingMenuStyle.Item.Label"
+                    android:padding="8dp"
+                    android:text="@string/camera_setting_menu_rear_camera" />
+            </android.support.v7.widget.CardView>
+
+            <com.loosu.acamera.widget.SettingItemView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:itemSubTextSize="16"
+                app:itemSubText="subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext "
+                app:itemSubTextColor="@color/selector_text_color"
+                app:itemText="@string/camera_setting_menu_rear_camera"
+                app:itemTextColor="#ff0" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
