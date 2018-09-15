@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,11 +72,15 @@ public class SettingItemView extends LinearLayout {
 
         mItemTextView.setText(itemText);
         mItemTextView.setTextSize(itemTextSize);
-        mItemTextView.setTextColor(itemColorList);
+        if (itemColorList != null) {
+            mItemTextView.setTextColor(itemColorList);
+        }
 
-        mItemSubTextView.setText(itemSubText);
-        mItemSubTextView.setTextSize(itemSubTextSize);
-        mItemSubTextView.setTextColor(itemSubTextColorList);
+        setItemSubText(itemSubText);
+        setItemSubTextSize(itemSubTextSize);
+        if (itemSubTextColorList != null) {
+            mItemSubTextView.setTextColor(itemSubTextColorList);
+        }
 
         setSwitchEnable(switchEnable);
         mSwitch.setChecked(switchChecked);
@@ -118,6 +123,7 @@ public class SettingItemView extends LinearLayout {
 
     public void setItemSubText(CharSequence text) {
         mItemSubTextView.setText(text);
+        mItemSubTextView.setVisibility(TextUtils.isEmpty(text) ? GONE : VISIBLE);
     }
 
     public void getItemSubTextSize() {

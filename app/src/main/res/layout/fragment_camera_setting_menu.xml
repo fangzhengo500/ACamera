@@ -27,17 +27,12 @@
             </android.support.v7.widget.CardView>
 
             <com.loosu.acamera.widget.SettingItemView
+                android:id="@+id/item_face_back_image_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                app:itemSubText="subtext subtext subtex subtext123456789012345678901234567890"
-                app:itemSubTextColor="@color/selector_text_color"
-                app:itemSubTextSize="14"
-                app:itemSwitchChecked="true"
-                app:itemSwitchEnable="true"
-                app:itemText="@string/camera_setting_menu_rear_camera"
-                app:itemTextColor="#ff0"
-                app:itemTextSize="20" />
+                app:itemText="@string/camera_setting_menu_item_label_image_size" />
+
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
