@@ -30,11 +30,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                app:itemSubTextSize="16"
-                app:itemSubText="subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext subtext "
+                app:itemSubText="subtext subtext subtex subtext123456789012345678901234567890"
                 app:itemSubTextColor="@color/selector_text_color"
+                app:itemSubTextSize="14"
+                app:itemSwitchChecked="true"
+                app:itemSwitchEnable="true"
                 app:itemText="@string/camera_setting_menu_rear_camera"
-                app:itemTextColor="#ff0" />
+                app:itemTextColor="#ff0"
+                app:itemTextSize="20" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

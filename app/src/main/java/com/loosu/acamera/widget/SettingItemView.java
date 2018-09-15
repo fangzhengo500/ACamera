@@ -57,11 +57,11 @@ public class SettingItemView extends LinearLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SettingItemView);
 
         String itemText = typedArray.getString(R.styleable.SettingItemView_itemText);
-        int itemTextSize = typedArray.getInt(R.styleable.SettingItemView_itemTextSize, 16);
+        float itemTextSize = typedArray.getFloat(R.styleable.SettingItemView_itemTextSize, 16);
         ColorStateList itemColorList = typedArray.getColorStateList(R.styleable.SettingItemView_itemTextColor);
 
         String itemSubText = typedArray.getString(R.styleable.SettingItemView_itemSubText);
-        int itemSubTextSize = typedArray.getInt(R.styleable.SettingItemView_itemSubTextSize, 14);
+        float itemSubTextSize = typedArray.getFloat(R.styleable.SettingItemView_itemSubTextSize, 14);
         ColorStateList itemSubTextColorList = typedArray.getColorStateList(R.styleable.SettingItemView_itemSubTextColor);
 
         boolean switchEnable = typedArray.getBoolean(R.styleable.SettingItemView_itemSwitchEnable, false);
@@ -77,25 +77,92 @@ public class SettingItemView extends LinearLayout {
         mItemSubTextView.setTextSize(itemSubTextSize);
         mItemSubTextView.setTextColor(itemSubTextColorList);
 
-        mSwitch.setVisibility(switchEnable ? VISIBLE : GONE);
+        setSwitchEnable(switchEnable);
         mSwitch.setChecked(switchChecked);
         mSwitch.setOnCheckedChangeListener(mMyCheckChangeListener);
+    }
+
+    // itemText
+    public CharSequence getItemText() {
+        return mItemTextView.getText();
     }
 
     public void setItemText(CharSequence text) {
         mItemTextView.setText(text);
     }
 
-    public CharSequence getItemText() {
-        return mItemTextView.getText();
+    public void getItemTextSize() {
+        mItemTextView.getTextSize();
+    }
+
+    public void setItemTextSize(float size) {
+        mItemTextView.setTextSize(size);
+    }
+
+    public ColorStateList getItemTextColor() {
+        return mItemTextView.getTextColors();
+    }
+
+    public void setItemTextColor(int color) {
+        mItemTextView.setTextColor(color);
+    }
+
+    public void setItemTextColorList(ColorStateList colors) {
+        mItemTextView.setTextColor(colors);
+    }
+
+    // itemSubText
+    public CharSequence getItemSubText() {
+        return mItemSubTextView.getText();
     }
 
     public void setItemSubText(CharSequence text) {
         mItemSubTextView.setText(text);
     }
 
-    public CharSequence getItemSubText() {
-        return mItemSubTextView.getText();
+    public void getItemSubTextSize() {
+        mItemSubTextView.getTextSize();
+    }
+
+    public void setItemSubTextSize(float size) {
+        mItemSubTextView.setTextSize(size);
+    }
+
+    public void setItemSubTextColor(int color) {
+        mItemSubTextView.setTextColor(color);
+    }
+
+    public ColorStateList getItemSubTextColor() {
+        return mItemSubTextView.getTextColors();
+    }
+
+    public void setItemSubTextColorList(ColorStateList colors) {
+        mItemSubTextView.setTextColor(colors);
+    }
+
+    public boolean isSwitchEnable() {
+        return mSwitch.isEnabled();
+    }
+
+    public void setSwitchEnable(boolean enable) {
+        mSwitch.setEnabled(enable);
+        mSwitch.setVisibility(mSwitch.isEnabled() ? VISIBLE : GONE);
+    }
+
+    public boolean isSwitchChecked() {
+        return isSwitchEnable() && mSwitch.isEnabled();
+    }
+
+    public void setSwitchChecked(boolean checked) {
+        mSwitch.setChecked(checked);
+    }
+
+    public ItemCheckChangeLisenter getLisenter() {
+        return mLisenter;
+    }
+
+    public void setLisenter(ItemCheckChangeLisenter lisenter) {
+        mLisenter = lisenter;
     }
 
     public interface ItemCheckChangeLisenter {
