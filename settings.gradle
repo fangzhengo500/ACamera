@@ -1,1 +1,3 @@
-include ':app', ':mvpframewor'
+include ':app'
+include ':themvpframework_lib'
+project(':themvpframework_lib').projectDir = new File('../themvpframework_lib')

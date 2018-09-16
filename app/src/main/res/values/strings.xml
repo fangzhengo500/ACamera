@@ -3,4 +3,8 @@
     <string name="camera_setting_menu_af">自动对焦</string>
     <string name="camera_setting_menu_rear_camera">后置摄像头</string>
     <string name="camera_setting_menu_item_label_image_size">图片大小</string>
+    <string name="camera_setting_menu_item_label_video_size">视频大小</string>
+    <string name="camera_setting_menu_item_label_af">自动对焦</string>
+    <string name="camera_setting_facing_back_label_image_format">保存RAW和JPEG文件</string>
+    <string name="camera_setting_facing_back_desc_image_format">在专业模式中以压缩格式（JPEG）和RAW格式保存您拍摄的每张照片。连拍无法保存为RAW文件</string>
 </resources>

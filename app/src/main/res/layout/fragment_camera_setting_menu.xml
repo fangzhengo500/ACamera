@@ -30,9 +30,20 @@
                 android:id="@+id/item_face_back_image_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:itemText="@string/camera_setting_menu_item_label_image_size" />
+                app:item_text="@string/camera_setting_menu_item_label_image_size" />
 
+            <com.loosu.acamera.widget.SettingItemView
+                android:id="@+id/item_face_back_vido_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_text="@string/camera_setting_menu_item_label_video_size" />
 
+            <com.loosu.acamera.widget.SettingItemView
+                android:id="@+id/item_face_back_af"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:item_switch_enable="true"
+                app:item_text="@string/camera_setting_menu_item_label_af" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

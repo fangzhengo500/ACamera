@@ -7,16 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fA6"
-    tools:context=".view.activity.MainActivity">
+    tools:context=".presenter.activity.MainActivity">
 
     <fragment
-        class="com.loosu.acamera.view.fragment.CameraPerviewFragment"
+        class="com.loosu.acamera.presenter.fragment.CameraPerviewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <fragment
         android:id="@+id/main_drawer_menu"
-        class="com.loosu.acamera.view.fragment.CameraSettingMenuFragment"
+        class="com.loosu.acamera.presenter.fragment.CameraSettingMenuFragment"
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"/>

@@ -3,6 +3,7 @@ package com.loosu.acamera.widget;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -57,16 +58,16 @@ public class SettingItemView extends LinearLayout {
     private void iniView(Context context, @Nullable AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SettingItemView);
 
-        String itemText = typedArray.getString(R.styleable.SettingItemView_itemText);
-        float itemTextSize = typedArray.getFloat(R.styleable.SettingItemView_itemTextSize, 16);
-        ColorStateList itemColorList = typedArray.getColorStateList(R.styleable.SettingItemView_itemTextColor);
+        String itemText = typedArray.getString(R.styleable.SettingItemView_item_text);
+        float itemTextSize = typedArray.getFloat(R.styleable.SettingItemView_item_text_size, 16);
+        ColorStateList itemColorList = typedArray.getColorStateList(R.styleable.SettingItemView_item_text_color);
 
-        String itemSubText = typedArray.getString(R.styleable.SettingItemView_itemSubText);
-        float itemSubTextSize = typedArray.getFloat(R.styleable.SettingItemView_itemSubTextSize, 14);
-        ColorStateList itemSubTextColorList = typedArray.getColorStateList(R.styleable.SettingItemView_itemSubTextColor);
+        String itemSubText = typedArray.getString(R.styleable.SettingItemView_item_sub_text);
+        float itemSubTextSize = typedArray.getFloat(R.styleable.SettingItemView_item_sub_text_size, 14);
+        ColorStateList itemSubTextColorList = typedArray.getColorStateList(R.styleable.SettingItemView_item_sub_text_color);
 
-        boolean switchEnable = typedArray.getBoolean(R.styleable.SettingItemView_itemSwitchEnable, false);
-        boolean switchChecked = typedArray.getBoolean(R.styleable.SettingItemView_itemSwitchChecked, false);
+        boolean switchEnable = typedArray.getBoolean(R.styleable.SettingItemView_item_switch_enable, false);
+        boolean switchChecked = typedArray.getBoolean(R.styleable.SettingItemView_item_switch_checked, false);
 
         typedArray.recycle();
 
@@ -85,6 +86,11 @@ public class SettingItemView extends LinearLayout {
         setSwitchEnable(switchEnable);
         mSwitch.setChecked(switchChecked);
         mSwitch.setOnCheckedChangeListener(mMyCheckChangeListener);
+
+        Drawable background = getBackground();
+        if (background == null) {
+            setBackgroundResource(R.drawable.setting_item_view_background);
+        }
     }
 
     // itemText

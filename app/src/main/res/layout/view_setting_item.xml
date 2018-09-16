@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:elevation="1.5dp"
     android:gravity="center"
     android:orientation="horizontal"
     android:paddingBottom="6dp"
     android:paddingLeft="12dp"
     android:paddingRight="12dp"
-    android:paddingTop="6dp"
-    tools:background="#CCC">
+    android:paddingTop="6dp">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -42,5 +42,6 @@
         android:id="@+id/setting_item_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp" />
+        android:layout_marginLeft="10dp"
+        android:clickable="false" />
 </LinearLayout>
