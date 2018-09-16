@@ -10,7 +10,7 @@
     tools:context=".presenter.activity.MainActivity">
 
     <fragment
-        class="com.loosu.acamera.presenter.fragment.CameraPerviewFragment"
+        class="com.loosu.acamera.presenter.fragment.CameraPreviewFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

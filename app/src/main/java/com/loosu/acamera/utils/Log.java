@@ -38,7 +38,7 @@ public class Log {
     }
 
     public static void e(String TAG, String msg) {
-        android.util.Log.e(TAG, msg);
+        android.util.Log.e(TAG, msg + ". " + GetFileLine());
     }
 
     public static void e(String TAG, String msg, Throwable throwable) {
