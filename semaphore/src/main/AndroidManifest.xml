@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.loosu.acamera">
-
-    <uses-permission android:name="android.permission.CAMERA" />
+    package="com.loosu.semaphore">
 
     <application
         android:allowBackup="true"
@@ -11,16 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".presenter.activity.MainActivity"
-            android:theme="@style/AppTheme.Fullscreen">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presenter.activity.FaceBackImageSizeConfigActivity" />
+        <activity android:name=".demo1.Demo1" />
     </application>
 
 </manifest>
